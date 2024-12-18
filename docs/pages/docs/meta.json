@@ -1,0 +1,40 @@
+{
+  "introduction": "Introduction",
+  "get-started": "Get Started",
+  "quick-start": "Quick Start",
+  "oo-system": "Oracle System",
+
+  "smartcontract": "Smart Contract",
+  "node": "Node",
+
+  "-- usage": {
+    "type": "separator",
+    "title": "Usage"
+  },
+  "address-feedid": "Address & Feed ID",
+
+  "-- support": {
+    "type": "separator",
+    "title": "Support"
+  },
+  "supports": "Support Networks",
+
+  "-- more": {
+    "type": "separator",
+    "title": "More"
+  },
+
+  "repo": {
+    "title": "Repo ↗",
+    "type": "page",
+    "href": "https://github.com/nidz-the-fact/open-oracle",
+    "newWindow": true
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://linktr.ee/nid_z",
+    "newWindow": true
+  }
+
+}

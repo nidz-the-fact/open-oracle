@@ -1,0 +1,35 @@
+# Quick start
+
+## `OpenOracle (OO)` - Guide
+### `getPrice` - function
+The `getPrice` function is designed to dynamically retrieve the latest price from a price oracle for a given feed ID, using the [OpenOracle (OO) Address and Feed ID](/docs/address-feedid). Below is a detailed guide on its implementation and usage.
+
+#### Usage
+How to integrate OpenOracle (OO) into your contracts to get dynamic pricing in 1-4 easy steps. <br/>
+##### 1. import <br/>
+```solidity
+interface OpenOracle {
+    function getPrice(uint256 feedID) external view returns (uint256);
+}
+```
+##### 2. variable <br/>
+```solidity
+OpenOracle public openoracle;
+```
+##### 3. constructor <br/>
+```solidity
+openoracle = OpenOracle(OO_ADDRESS); // edit: address
+```
+##### 4. use (build in your function (payable))
+```solidity
+uint256 price = openoracle.getPrice(FEED_ID); // edit: number
+require(msg.value >= price, "Insufficient funds");
+```
+
+*Check out the OpenOracle (OO) for [NFT](/docs/smartcontract/examples/nft), [Token](/docs/smartcontract/examples/token) examples on [GitHub](https://github.com/nidz-the-fact/open-oracle) for more information.*
+
+#### Note
+This beta version is not recommended for integration into long-term functions. Additionally consider implementing functionality to update the `OO_ADDRESS` and `FEED_ID` as needed. ([OpenOracle (OO) Address and Feed ID](/docs/address-feedid))
+
+---
+
