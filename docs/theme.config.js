@@ -13,7 +13,7 @@ export default {
     </p>
   ),
   projectLink: 'https://github.com/nidz-the-fact/open-oracle',
-  docsRepositoryBase: 'https://github.com/nidz-the-fact/open-oracle/tree/main/docs/pages',
+  docsRepositoryBase: 'https://github.com/nidz-the-fact/open-oracle/blob/main/docs/pages',
   gitTimestamp: true,
   search: true,
   titleSuffix: '',
@@ -72,14 +72,29 @@ export default {
           rel='noopener'
           className='no-underline font-semibold'
         >
-          Nidz 
+          Nidz
         </a>
         .
       </p>
     )
   },
   footerEditLink: () => {
-    return 'Edit this page'
+    const { route } = useRouter()
+    const docsRepositoryBase = 'https://github.com/nidz-the-fact/open-oracle/blob/main/docs/pages'
+
+    return (
+      <span>
+        <span
+          style={{
+            color: 'gray',
+            cursor: 'pointer'
+          }}
+          onClick={() => window.open(`${docsRepositoryBase}${route}.mdx`, '_blank')}
+        >
+          Edit this page
+        </span>
+      </span>
+    )
   },
-  
+
 }
